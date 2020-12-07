@@ -8,23 +8,31 @@
 
 /home/giacomo/CLionProjects/playfair_cypher/keyfile_read.h
 
+/home/giacomo/CLionProjects/playfair_cypher/matrix_gen.c
+stdio.h
+-
+stdlib.h
+-
+matrix_gen.h
+/home/giacomo/CLionProjects/playfair_cypher/matrix_gen.h
+utils.h
+/home/giacomo/CLionProjects/playfair_cypher/utils.h
+keyfile_read.h
+/home/giacomo/CLionProjects/playfair_cypher/keyfile_read.h
+
 /home/giacomo/CLionProjects/playfair_cypher/matrix_gen.h
 keyfile_read.h
 /home/giacomo/CLionProjects/playfair_cypher/keyfile_read.h
 
-/home/giacomo/CLionProjects/playfair_cypher/secretmessage_encode.c
+/home/giacomo/CLionProjects/playfair_cypher/utils.c
 stdio.h
 -
 stdlib.h
-/home/giacomo/CLionProjects/playfair_cypher/stdlib.h
-secretmessage_encode.h
-/home/giacomo/CLionProjects/playfair_cypher/secretmessage_encode.h
+-
 utils.h
 /home/giacomo/CLionProjects/playfair_cypher/utils.h
-matrix_gen.h
-/home/giacomo/CLionProjects/playfair_cypher/matrix_gen.h
-
-/home/giacomo/CLionProjects/playfair_cypher/secretmessage_encode.h
+keyfile_read.h
+/home/giacomo/CLionProjects/playfair_cypher/keyfile_read.h
 
 /home/giacomo/CLionProjects/playfair_cypher/utils.h
 keyfile_read.h

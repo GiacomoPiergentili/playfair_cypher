@@ -18,8 +18,10 @@ void free_matrix(char **matrix) {
     if (matrix != NULL) {
         for (int i = 0; i < 5; ++i) {
             free(matrix[i]);
+            matrix[i] = NULL;
         }
         free(matrix);
+        matrix = NULL;
     }
 }
 
