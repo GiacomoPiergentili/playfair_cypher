@@ -91,6 +91,9 @@
 		<Unit filename="/home/giacomo/CLionProjects/playfair_cypher/matrix_gen.h">
 			<Option target="playfair_cypher"/>
 		</Unit>
+		<Unit filename="/home/giacomo/CLionProjects/playfair_cypher/matrix_utils.c">
+			<Option target="playfair_cypher"/>
+		</Unit>
 		<Unit filename="/home/giacomo/CLionProjects/playfair_cypher/secretmessage_encode.c">
 			<Option target="playfair_cypher"/>
 		</Unit>

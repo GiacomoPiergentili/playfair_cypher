@@ -1,29 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "matrix_gen.h"
-#include "utils.h"
+#include "matrix_utils.h"
 #include "keyfile_read.h"
-
-
-char **initialize_matrix(char **matrix) {
-    int i;
-    matrix = (char **) calloc(5, sizeof(char *));
-    for (i = 0; i < 5; i++) {
-        matrix[i] = (char *) calloc(5, sizeof(char));
-    }
-    return matrix;
-}
-
-void free_matrix(char **matrix) {
-    if (matrix != NULL) {
-        for (int i = 0; i < 5; ++i) {
-            free(matrix[i]);
-            matrix[i] = NULL;
-        }
-        free(matrix);
-        matrix = NULL;
-    }
-}
 
 kf *complete_keyfile(char *keyfile_path) {
     kf *keyfile = malloc(sizeof(kf) + 1);
@@ -83,16 +62,6 @@ void write_alphabet(char **matrix, al *alphabet, int *last_r, int *last_c) {
                 }
             }
         }
-    }
-}
-
-void print_matrix(char **matrix) {
-    int row, columns;
-    for (row = 0; row < 5; row++) {
-        for (columns = 0; columns < 5; columns++) {
-            printf("%c     ", matrix[row][columns]);
-        }
-        printf("\n");
     }
 }
 

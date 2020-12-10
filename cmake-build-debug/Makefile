@@ -224,6 +224,33 @@ matrix_gen.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair_cypher.dir/build.make CMakeFiles/playfair_cypher.dir/matrix_gen.c.s
 .PHONY : matrix_gen.c.s
 
+matrix_utils.o: matrix_utils.c.o
+
+.PHONY : matrix_utils.o
+
+# target to build an object file
+matrix_utils.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair_cypher.dir/build.make CMakeFiles/playfair_cypher.dir/matrix_utils.c.o
+.PHONY : matrix_utils.c.o
+
+matrix_utils.i: matrix_utils.c.i
+
+.PHONY : matrix_utils.i
+
+# target to preprocess a source file
+matrix_utils.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair_cypher.dir/build.make CMakeFiles/playfair_cypher.dir/matrix_utils.c.i
+.PHONY : matrix_utils.c.i
+
+matrix_utils.s: matrix_utils.c.s
+
+.PHONY : matrix_utils.s
+
+# target to generate assembly for a file
+matrix_utils.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair_cypher.dir/build.make CMakeFiles/playfair_cypher.dir/matrix_utils.c.s
+.PHONY : matrix_utils.c.s
+
 secretmessage_encode.o: secretmessage_encode.c.o
 
 .PHONY : secretmessage_encode.o
@@ -296,6 +323,9 @@ help:
 	@echo "... matrix_gen.o"
 	@echo "... matrix_gen.i"
 	@echo "... matrix_gen.s"
+	@echo "... matrix_utils.o"
+	@echo "... matrix_utils.i"
+	@echo "... matrix_utils.s"
 	@echo "... secretmessage_encode.o"
 	@echo "... secretmessage_encode.i"
 	@echo "... secretmessage_encode.s"
