@@ -8,6 +8,8 @@ typedef struct message{
 }sm;
 
 char *read_message(char *secretemessage_path);
-void create_message(/*char *secretemessage_path*/);
+void create_message(char *secretemessage_path);
+void fill(char **matrix, char *str, int size_m, char special_c);
+int find_m_size(char *str);
 
 #endif //PLAYFAIR_CYPHER_SECRETMESSAGE_ENCODE_H

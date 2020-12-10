@@ -2,11 +2,11 @@
 #include "stdlib.h"
 #include "stdio.h"
 
-char **initialize_matrix(char **matrix) {
+char **initialize_matrix(char **matrix, int nr, int nc) {
     int i;
-    matrix = (char **) calloc(5, sizeof(char *));
-    for (i = 0; i < 5; i++) {
-        matrix[i] = (char *) calloc(5, sizeof(char));
+    matrix = (char **) calloc(nr, sizeof(char *));
+    for (i = 0; i < nr; i++) {
+        matrix[i] = (char *) calloc(nc, sizeof(char));
     }
     return matrix;
 }
@@ -23,10 +23,10 @@ void free_matrix(char **matrix) {
 }
 
 
-void print_matrix(char **matrix) {
+void print_matrix(char **matrix, int nr, int nc) {
     int row, columns;
-    for (row = 0; row < 5; row++) {
-        for (columns = 0; columns < 5; columns++) {
+    for (row = 0; row < nr; row++) {
+        for (columns = 0; columns < nc; columns++) {
             printf("%c     ", matrix[row][columns]);
         }
         printf("\n");
