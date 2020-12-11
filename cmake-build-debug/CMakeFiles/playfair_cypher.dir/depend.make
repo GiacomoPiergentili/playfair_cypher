@@ -5,11 +5,6 @@ CMakeFiles/playfair_cypher.dir/keyfile_read.c.o: ../keyfile_read.c
 CMakeFiles/playfair_cypher.dir/keyfile_read.c.o: ../keyfile_read.h
 CMakeFiles/playfair_cypher.dir/keyfile_read.c.o: ../utils.h
 
-CMakeFiles/playfair_cypher.dir/main.c.o: ../keyfile_read.h
-CMakeFiles/playfair_cypher.dir/main.c.o: ../main.c
-CMakeFiles/playfair_cypher.dir/main.c.o: ../matrix_gen.h
-CMakeFiles/playfair_cypher.dir/main.c.o: ../secretmessage_encode.h
-CMakeFiles/playfair_cypher.dir/main.c.o: ../utils.h
 
 CMakeFiles/playfair_cypher.dir/matrix_gen.c.o: ../keyfile_read.h
 CMakeFiles/playfair_cypher.dir/matrix_gen.c.o: ../matrix_gen.c

@@ -39,7 +39,7 @@ char *remove_spaces(char *str) {
 
 int size_of_string(char *str) {
     int size = 0;
-    while (str[size] != NULL) {
+    while (str[size] != '\0') {
         size++;
     }
     return size;

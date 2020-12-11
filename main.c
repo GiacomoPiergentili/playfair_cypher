@@ -1,7 +1,3 @@
-#include <stdio.h>
-#include "stdlib.h"
-#include "utils.h"
-#include "keyfile_read.h"
 #include "matrix_gen.h"
 #include "secretmessage_encode.h"
 

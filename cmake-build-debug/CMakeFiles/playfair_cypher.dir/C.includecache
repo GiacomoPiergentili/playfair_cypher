@@ -6,25 +6,3 @@
 
 #IncludeRegexTransform: 
 
-/home/giacomo/CLionProjects/playfair_cypher/keyfile_read.h
-
-/home/giacomo/CLionProjects/playfair_cypher/matrix_utils.h
-
-/home/giacomo/CLionProjects/playfair_cypher/secretmessage_encode.c
-stdio.h
--
-stdlib.h
-/home/giacomo/CLionProjects/playfair_cypher/stdlib.h
-secretmessage_encode.h
-/home/giacomo/CLionProjects/playfair_cypher/secretmessage_encode.h
-utils.h
-/home/giacomo/CLionProjects/playfair_cypher/utils.h
-matrix_utils.h
-/home/giacomo/CLionProjects/playfair_cypher/matrix_utils.h
-
-/home/giacomo/CLionProjects/playfair_cypher/secretmessage_encode.h
-
-/home/giacomo/CLionProjects/playfair_cypher/utils.h
-keyfile_read.h
-/home/giacomo/CLionProjects/playfair_cypher/keyfile_read.h
-
