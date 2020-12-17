@@ -15,8 +15,10 @@ typedef struct key {
 typedef struct keyfile {
     al *alphabet;
     char missing_char;
+    char missing_alphabet_letter;
     char special_char;
     k *key;
+    char **matrix;
 }kf;
 
 
@@ -24,5 +26,6 @@ typedef struct keyfile {
 void read_all(char *keyfile_path, kf *keyfile);
 void find_repetition(k *key);
 void clear_alphabet(al *alphabet, k *key);
+char find_missing_letter(al *alphabet);
 
 #endif //PLAYFAIR_CYPHER_KEYFILE_READ_H

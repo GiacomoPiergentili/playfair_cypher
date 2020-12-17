@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 #include "utils.h"
-#include "keyfile_read.h"
 
 long find_size(FILE *fp) {
     fseek(fp, 0L, SEEK_END);
@@ -15,7 +15,7 @@ void read(char *buffer, FILE *fp, int size) {
     char ch;
     for (i = 0; (i < size - 1); i++) {
         ch = fgetc(fp);
-        buffer[i] = ch;
+        buffer[i] = toupper(ch);
     }
     buffer[i] = '\0';
 }

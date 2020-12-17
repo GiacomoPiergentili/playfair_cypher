@@ -11,14 +11,17 @@ kf *complete_keyfile(char *keyfile_path) {
     read_all(keyfile_path, keyfile);
     find_repetition(keyfile->key);
     clear_alphabet(keyfile->alphabet, keyfile->key);
+    keyfile->missing_alphabet_letter = find_missing_letter(keyfile->alphabet);
+    keyfile->matrix = initialize_matrix(keyfile->matrix, 5, 5);
+    fill_matrix(keyfile);
     return keyfile;
 }
 
-void fill_matrix(char **matrix, kf *keyfile) {
+void fill_matrix(kf *keyfile) {
     int last_r, last_c;
-    write_key(matrix, keyfile->key, &last_r, &last_c);
-    write_alphabet(matrix, keyfile->alphabet, &last_r, &last_c);
-    print_matrix(matrix, 5 , 5);
+    write_key(keyfile->matrix, keyfile->key, &last_r, &last_c);
+    write_alphabet(keyfile->matrix, keyfile->alphabet, &last_r, &last_c);
+    print_matrix(keyfile->matrix, 5 , 5);
 }
 
 void write_key(char **matrix, k *key, int *last_r, int *last_c) {
@@ -65,10 +68,9 @@ void write_alphabet(char **matrix, al *alphabet, int *last_r, int *last_c) {
     }
 }
 
-void run1(char *path) {
-    char **matrix = NULL;
-    matrix = initialize_matrix(matrix, 5, 5);
+kf *run1(char *path) {
     kf *keyfile = complete_keyfile(path);
-    fill_matrix(matrix, keyfile);
+    return  keyfile;
+
 }
 

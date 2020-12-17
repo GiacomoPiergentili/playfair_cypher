@@ -14,6 +14,13 @@ CMakeFiles/playfair_cypher.dir/matrix_gen.c.o: ../matrix_utils.h
 CMakeFiles/playfair_cypher.dir/matrix_utils.c.o: ../matrix_utils.c
 CMakeFiles/playfair_cypher.dir/matrix_utils.c.o: ../matrix_utils.h
 
+CMakeFiles/playfair_cypher.dir/secreteemessage_decode.c.o: ../keyfile_read.h
+CMakeFiles/playfair_cypher.dir/secreteemessage_decode.c.o: ../matrix_utils.h
+CMakeFiles/playfair_cypher.dir/secreteemessage_decode.c.o: ../secreteemessage_decode.c
+CMakeFiles/playfair_cypher.dir/secreteemessage_decode.c.o: ../secretmessage_decode.h
+CMakeFiles/playfair_cypher.dir/secreteemessage_decode.c.o: ../secretmessage_encode.h
+CMakeFiles/playfair_cypher.dir/secreteemessage_decode.c.o: ../utils.h
+
 CMakeFiles/playfair_cypher.dir/secretmessage_encode.c.o: ../keyfile_read.h
 CMakeFiles/playfair_cypher.dir/secretmessage_encode.c.o: ../matrix_utils.h
 CMakeFiles/playfair_cypher.dir/secretmessage_encode.c.o: ../secretmessage_encode.c

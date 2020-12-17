@@ -41,11 +41,31 @@ void clear_alphabet(al *alphabet, k *key) {
     for (int i = 0; i < size_of_string(key -> key); i++) {
         if (key -> flag[i] == 0) {
             for (int j = 0; j < 25; j++) {
-                if (key -> key[i] == alphabet -> alphabet[j]) {
+                if (key -> key[i] == alphabet->alphabet[j]) {
                     alphabet -> flag[j] = 1;
                     break;
                 }
             }
         }
+    }
+}
+
+char find_missing_letter(al *alphabet) {
+    char f_alphabet[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    int i = 0;
+    int j;
+    int found;
+    while(i < 26) {
+        found = 0;
+        j = 0;
+        while(j < 25 && found == 0) {
+            if (alphabet->alphabet[j] == f_alphabet[i])
+                found = 1;
+            else
+                j++;
+        }
+        if (found == 0)
+            return f_alphabet[i];
+        i++;
     }
 }
