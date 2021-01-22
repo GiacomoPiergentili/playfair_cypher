@@ -43,11 +43,12 @@ char *remove_missing_alphabet_letter(char *str, char missing_alphabet_letter, ch
     return str;
 }
 
-void create_message(char *secretemessage_path, kf *keyfile) {
+sm *create_message(char *secretemessage_path, kf *keyfile) {
     char *str = read_message(secretemessage_path, keyfile->missing_alphabet_letter, keyfile->missing_char);
     sm *message = init_message_E(str);
     fill_pairs_E(message->pairs, str, message->size, keyfile->special_char);
     fill_encoded_pairs_E(message->pairs, message->encoded_pairs, keyfile->matrix, message->size);
+    return message;
 }
 
 void fill_pairs_E(char **pairs, char *str, int size_m, char special_c) {

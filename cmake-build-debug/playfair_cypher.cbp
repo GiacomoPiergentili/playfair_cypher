@@ -76,6 +76,18 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/giacomo/CLionProjects/playfair_cypher/commands.c">
+			<Option target="playfair_cypher"/>
+		</Unit>
+		<Unit filename="/home/giacomo/CLionProjects/playfair_cypher/commands.h">
+			<Option target="playfair_cypher"/>
+		</Unit>
+		<Unit filename="/home/giacomo/CLionProjects/playfair_cypher/file_utils.c">
+			<Option target="playfair_cypher"/>
+		</Unit>
+		<Unit filename="/home/giacomo/CLionProjects/playfair_cypher/file_utils.h">
+			<Option target="playfair_cypher"/>
+		</Unit>
 		<Unit filename="/home/giacomo/CLionProjects/playfair_cypher/keyfile_read.c">
 			<Option target="playfair_cypher"/>
 		</Unit>
@@ -97,7 +109,10 @@
 		<Unit filename="/home/giacomo/CLionProjects/playfair_cypher/matrix_utils.h">
 			<Option target="playfair_cypher"/>
 		</Unit>
-		<Unit filename="/home/giacomo/CLionProjects/playfair_cypher/secreteemessage_decode.c">
+		<Unit filename="/home/giacomo/CLionProjects/playfair_cypher/secretmessage_decode.c">
+			<Option target="playfair_cypher"/>
+		</Unit>
+		<Unit filename="/home/giacomo/CLionProjects/playfair_cypher/secretmessage_decode.h">
 			<Option target="playfair_cypher"/>
 		</Unit>
 		<Unit filename="/home/giacomo/CLionProjects/playfair_cypher/secretmessage_encode.c">

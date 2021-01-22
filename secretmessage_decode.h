@@ -2,7 +2,7 @@
 #define PLAYFAIR_CYPHER_SECRETMESSAGE_DECODE_H
 
 char *read_encoded_message(char *encodedmessage_path);
-void create_encoded_message(char *encodedmessage_path, kf *keyfile);
+sm *create_encoded_message(char *encodedmessage_path, kf *keyfile);
 sm *init_message_D(char *str);
 
 void fill_encoded_pairs_D(int size, char *str, char **encoded_pairs, char missing_alphabet_letter);

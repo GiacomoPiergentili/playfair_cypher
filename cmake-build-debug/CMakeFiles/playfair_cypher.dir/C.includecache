@@ -6,31 +6,37 @@
 
 #IncludeRegexTransform: 
 
-/home/giacomo/CLionProjects/playfair_cypher/keyfile_read.h
-
-/home/giacomo/CLionProjects/playfair_cypher/matrix_utils.h
-
-/home/giacomo/CLionProjects/playfair_cypher/secreteemessage_decode.c
+/home/giacomo/CLionProjects/playfair_cypher/commands.c
 stdlib.h
 -
-stdio.h
--
-utils.h
-/home/giacomo/CLionProjects/playfair_cypher/utils.h
-matrix_utils.h
-/home/giacomo/CLionProjects/playfair_cypher/matrix_utils.h
+commands.h
+/home/giacomo/CLionProjects/playfair_cypher/commands.h
+matrix_gen.h
+/home/giacomo/CLionProjects/playfair_cypher/matrix_gen.h
 secretmessage_encode.h
 /home/giacomo/CLionProjects/playfair_cypher/secretmessage_encode.h
 secretmessage_decode.h
 /home/giacomo/CLionProjects/playfair_cypher/secretmessage_decode.h
+file_utils.h
+/home/giacomo/CLionProjects/playfair_cypher/file_utils.h
+
+/home/giacomo/CLionProjects/playfair_cypher/commands.h
+keyfile_read.h
+/home/giacomo/CLionProjects/playfair_cypher/keyfile_read.h
+
+/home/giacomo/CLionProjects/playfair_cypher/file_utils.h
+secretmessage_encode.h
+/home/giacomo/CLionProjects/playfair_cypher/secretmessage_encode.h
+
+/home/giacomo/CLionProjects/playfair_cypher/keyfile_read.h
+
+/home/giacomo/CLionProjects/playfair_cypher/matrix_gen.h
+keyfile_read.h
+/home/giacomo/CLionProjects/playfair_cypher/keyfile_read.h
 
 /home/giacomo/CLionProjects/playfair_cypher/secretmessage_decode.h
 
 /home/giacomo/CLionProjects/playfair_cypher/secretmessage_encode.h
-keyfile_read.h
-/home/giacomo/CLionProjects/playfair_cypher/keyfile_read.h
-
-/home/giacomo/CLionProjects/playfair_cypher/utils.h
 keyfile_read.h
 /home/giacomo/CLionProjects/playfair_cypher/keyfile_read.h
 

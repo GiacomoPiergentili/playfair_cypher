@@ -143,6 +143,60 @@ playfair_cypher/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair_cypher.dir/build.make CMakeFiles/playfair_cypher.dir/build
 .PHONY : playfair_cypher/fast
 
+commands.o: commands.c.o
+
+.PHONY : commands.o
+
+# target to build an object file
+commands.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair_cypher.dir/build.make CMakeFiles/playfair_cypher.dir/commands.c.o
+.PHONY : commands.c.o
+
+commands.i: commands.c.i
+
+.PHONY : commands.i
+
+# target to preprocess a source file
+commands.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair_cypher.dir/build.make CMakeFiles/playfair_cypher.dir/commands.c.i
+.PHONY : commands.c.i
+
+commands.s: commands.c.s
+
+.PHONY : commands.s
+
+# target to generate assembly for a file
+commands.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair_cypher.dir/build.make CMakeFiles/playfair_cypher.dir/commands.c.s
+.PHONY : commands.c.s
+
+file_utils.o: file_utils.c.o
+
+.PHONY : file_utils.o
+
+# target to build an object file
+file_utils.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair_cypher.dir/build.make CMakeFiles/playfair_cypher.dir/file_utils.c.o
+.PHONY : file_utils.c.o
+
+file_utils.i: file_utils.c.i
+
+.PHONY : file_utils.i
+
+# target to preprocess a source file
+file_utils.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair_cypher.dir/build.make CMakeFiles/playfair_cypher.dir/file_utils.c.i
+.PHONY : file_utils.c.i
+
+file_utils.s: file_utils.c.s
+
+.PHONY : file_utils.s
+
+# target to generate assembly for a file
+file_utils.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair_cypher.dir/build.make CMakeFiles/playfair_cypher.dir/file_utils.c.s
+.PHONY : file_utils.c.s
+
 keyfile_read.o: keyfile_read.c.o
 
 .PHONY : keyfile_read.o
@@ -251,32 +305,32 @@ matrix_utils.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair_cypher.dir/build.make CMakeFiles/playfair_cypher.dir/matrix_utils.c.s
 .PHONY : matrix_utils.c.s
 
-secreteemessage_decode.o: secreteemessage_decode.c.o
+secretmessage_decode.o: secretmessage_decode.c.o
 
-.PHONY : secreteemessage_decode.o
+.PHONY : secretmessage_decode.o
 
 # target to build an object file
-secreteemessage_decode.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair_cypher.dir/build.make CMakeFiles/playfair_cypher.dir/secreteemessage_decode.c.o
-.PHONY : secreteemessage_decode.c.o
+secretmessage_decode.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair_cypher.dir/build.make CMakeFiles/playfair_cypher.dir/secretmessage_decode.c.o
+.PHONY : secretmessage_decode.c.o
 
-secreteemessage_decode.i: secreteemessage_decode.c.i
+secretmessage_decode.i: secretmessage_decode.c.i
 
-.PHONY : secreteemessage_decode.i
+.PHONY : secretmessage_decode.i
 
 # target to preprocess a source file
-secreteemessage_decode.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair_cypher.dir/build.make CMakeFiles/playfair_cypher.dir/secreteemessage_decode.c.i
-.PHONY : secreteemessage_decode.c.i
+secretmessage_decode.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair_cypher.dir/build.make CMakeFiles/playfair_cypher.dir/secretmessage_decode.c.i
+.PHONY : secretmessage_decode.c.i
 
-secreteemessage_decode.s: secreteemessage_decode.c.s
+secretmessage_decode.s: secretmessage_decode.c.s
 
-.PHONY : secreteemessage_decode.s
+.PHONY : secretmessage_decode.s
 
 # target to generate assembly for a file
-secreteemessage_decode.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair_cypher.dir/build.make CMakeFiles/playfair_cypher.dir/secreteemessage_decode.c.s
-.PHONY : secreteemessage_decode.c.s
+secretmessage_decode.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair_cypher.dir/build.make CMakeFiles/playfair_cypher.dir/secretmessage_decode.c.s
+.PHONY : secretmessage_decode.c.s
 
 secretmessage_encode.o: secretmessage_encode.c.o
 
@@ -341,6 +395,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... playfair_cypher"
+	@echo "... commands.o"
+	@echo "... commands.i"
+	@echo "... commands.s"
+	@echo "... file_utils.o"
+	@echo "... file_utils.i"
+	@echo "... file_utils.s"
 	@echo "... keyfile_read.o"
 	@echo "... keyfile_read.i"
 	@echo "... keyfile_read.s"
@@ -353,9 +413,9 @@ help:
 	@echo "... matrix_utils.o"
 	@echo "... matrix_utils.i"
 	@echo "... matrix_utils.s"
-	@echo "... secreteemessage_decode.o"
-	@echo "... secreteemessage_decode.i"
-	@echo "... secreteemessage_decode.s"
+	@echo "... secretmessage_decode.o"
+	@echo "... secretmessage_decode.i"
+	@echo "... secretmessage_decode.s"
 	@echo "... secretmessage_encode.o"
 	@echo "... secretmessage_encode.i"
 	@echo "... secretmessage_encode.s"

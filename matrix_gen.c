@@ -21,7 +21,6 @@ void fill_matrix(kf *keyfile) {
     int last_r, last_c;
     write_key(keyfile->matrix, keyfile->key, &last_r, &last_c);
     write_alphabet(keyfile->matrix, keyfile->alphabet, &last_r, &last_c);
-    print_matrix(keyfile->matrix, 5 , 5);
 }
 
 void write_key(char **matrix, k *key, int *last_r, int *last_c) {
@@ -68,9 +67,8 @@ void write_alphabet(char **matrix, al *alphabet, int *last_r, int *last_c) {
     }
 }
 
-kf *run1(char *path) {
+kf *get_kf(char *path) {
     kf *keyfile = complete_keyfile(path);
     return  keyfile;
-
 }
 

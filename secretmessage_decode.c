@@ -11,12 +11,12 @@ char *read_encoded_message(char *encodedmessage_path) {
     return (remove_spaces(str));
 }
 
-void create_encoded_message(char *encodedmessage_path, kf *keyfile) {
+sm *create_encoded_message(char *encodedmessage_path, kf *keyfile) {
     char *str = read_encoded_message(encodedmessage_path);
     sm *message = init_message_D(str);
     fill_encoded_pairs_D(size_of_string(str), str, message->encoded_pairs, keyfile->missing_alphabet_letter);
     fill_pairs_D(message->pairs, message->encoded_pairs, keyfile->matrix, message->size);
-    print_matrix(message->pairs, message->size / 2, 2);
+    return message;
 }
 
 sm *init_message_D(char *str) {
