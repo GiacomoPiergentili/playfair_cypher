@@ -30,9 +30,23 @@ secretmessage_encode.h
 
 /home/giacomo/CLionProjects/playfair_cypher/keyfile_read.h
 
+/home/giacomo/CLionProjects/playfair_cypher/matrix_gen.c
+stdio.h
+-
+stdlib.h
+-
+matrix_gen.h
+/home/giacomo/CLionProjects/playfair_cypher/matrix_gen.h
+matrix_utils.h
+/home/giacomo/CLionProjects/playfair_cypher/matrix_utils.h
+keyfile_read.h
+/home/giacomo/CLionProjects/playfair_cypher/keyfile_read.h
+
 /home/giacomo/CLionProjects/playfair_cypher/matrix_gen.h
 keyfile_read.h
 /home/giacomo/CLionProjects/playfair_cypher/keyfile_read.h
+
+/home/giacomo/CLionProjects/playfair_cypher/matrix_utils.h
 
 /home/giacomo/CLionProjects/playfair_cypher/secretmessage_decode.h
 

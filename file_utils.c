@@ -41,11 +41,20 @@ void create_decoded_file(sm *message, char *name) {
     fclose(fp);
 }
 
-char *gen_path(char *secretemessage_path, char *dir_path) {
+char *gen_pf_path(char *secretemessage_path, char *dir_path) {
     char *name = malloc(sizeof(char) * (strlen(dir_path) + strlen(basename(secretemessage_path) + 3)));
     strcat(name, dir_path);
     strcat(name, "/");
     strcat(name, basename(secretemessage_path));
     strcat(name, ".pf");
+    return name;
+}
+
+char *gen_dec_path(char *secretemessage_path, char *dir_path) {
+    char *name = malloc(sizeof(char) * (strlen(dir_path) + strlen(basename(secretemessage_path) + 3)));
+    strcat(name, dir_path);
+    strcat(name, "/");
+    strcat(name, basename(secretemessage_path));
+    strcat(name, ".dec");
     return name;
 }

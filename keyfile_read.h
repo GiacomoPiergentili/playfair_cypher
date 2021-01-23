@@ -22,7 +22,6 @@ typedef struct keyfile {
 }kf;
 
 
-
 void read_all(char *keyfile_path, kf *keyfile);
 void find_repetition(k *key);
 void clear_alphabet(al *alphabet, k *key);

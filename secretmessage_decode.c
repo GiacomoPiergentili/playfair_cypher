@@ -50,11 +50,11 @@ void fill_pairs_D(char **pairs, char **encoded_pairs, char **matrix, int size) {
     for (int r = 0; r < size / 2; r++) {
         find_position(pos1, matrix, encoded_pairs[r][0]);
         find_position(pos2, matrix, encoded_pairs[r][1]);
-        if (pos1[0] != pos2[0] && pos1[1] != pos2[1]) { //righe e colonne diverse
+        if (pos1[0] != pos2[0] && pos1[1] != pos2[1]) {
             different_r_c_D(pairs, matrix, pos1, pos2, r);
-        } else if (pos1[0] == pos2[0]) { //stessa riga
+        } else if (pos1[0] == pos2[0]) {
             same_row_D(pairs, matrix, pos1, pos2, r);
-        } else if (pos1[1] == pos2[1]) { //stessa colonna
+        } else if (pos1[1] == pos2[1]) {
             same_column_D(pairs, matrix, pos1, pos2, r);
         } else {
             printf("%s", "CAN'T DECYPHER");

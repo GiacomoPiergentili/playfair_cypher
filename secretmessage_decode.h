@@ -12,8 +12,6 @@ void different_r_c_D(char **pairs, char **matrix, int pos1[], int pos2[], int r)
 void same_row_D(char **pairs, char **matrix, int pos1[], int pos2[], int r);
 void same_column_D(char **pairs, char **matrix, int pos1[], int pos2[], int r);
 
-
-
 void check_odd (char *str);
 
 

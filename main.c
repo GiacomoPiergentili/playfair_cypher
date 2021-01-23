@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 #include "commands.h"
 
 int main(int argc, char *argv[]) {
@@ -15,4 +16,5 @@ int main(int argc, char *argv[]) {
     }
     else
         printf("%s", "UNKNOWN COMMAND");
+    free(keyfile);
 }

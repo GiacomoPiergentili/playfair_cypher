@@ -67,8 +67,4 @@ void write_alphabet(char **matrix, al *alphabet, int *last_r, int *last_c) {
     }
 }
 
-kf *get_kf(char *path) {
-    kf *keyfile = complete_keyfile(path);
-    return  keyfile;
-}
 
