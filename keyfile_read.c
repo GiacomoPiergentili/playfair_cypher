@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include "keyfile_read.h"
 #include "utils.h"
+#include "matrix_utils.h"
 
 void read_all(char *keyfile_path, kf *keyfile) {
     FILE *kfp = fopen(keyfile_path, "r");
@@ -68,3 +69,19 @@ char find_missing_letter(al *alphabet) {
         i++;
     }
 }
+
+void free_alphabet(al *alphabet) {
+    free(alphabet->alphabet);
+    free(alphabet->flag);
+    free(alphabet);
+}
+void free_key(k *key) {
+    free(key->flag);
+    free(key);
+};
+void free_keyfile(kf *keyfile) {
+    free_alphabet(keyfile->alphabet);
+    free_key(keyfile->key);
+    free_matrix(keyfile->matrix);
+    free(keyfile);
+};

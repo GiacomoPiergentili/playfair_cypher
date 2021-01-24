@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <ctype.h>
 #include "utils.h"
+#include "matrix_utils.h"
 
 long find_size(FILE *fp) {
     fseek(fp, 0L, SEEK_END);
@@ -43,4 +44,11 @@ int size_of_string(char *str) {
         size++;
     }
     return size;
+}
+
+void free_message(sm *message) {
+    free_matrix(message->pairs);
+    free_matrix(message->encoded_pairs);
+    free(message);
+
 }

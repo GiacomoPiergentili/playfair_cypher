@@ -1,7 +1,7 @@
 #include <stdio.h>
-#include "stdlib.h"
-#include "secretmessage_encode.h"
+#include <stdlib.h>
 #include "utils.h"
+#include "secretmessage_encode.h"
 #include "matrix_utils.h"
 
 char *read_message(char *secretemessage_path, char missing_alphabet_letter, char missing_char) {

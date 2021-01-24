@@ -1,6 +1,8 @@
 #ifndef PLAYFAIR_CYPHER_SECRETMESSAGE_DECODE_H
 #define PLAYFAIR_CYPHER_SECRETMESSAGE_DECODE_H
 
+#include "utils.h"
+
 char *read_encoded_message(char *encodedmessage_path);
 sm *create_encoded_message(char *encodedmessage_path, kf *keyfile);
 sm *init_message_D(char *str);

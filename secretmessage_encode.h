@@ -2,12 +2,7 @@
 #define PLAYFAIR_CYPHER_SECRETMESSAGE_ENCODE_H
 
 #include "keyfile_read.h"
-
-typedef struct message{
-    int size;
-    char **pairs;
-    char **encoded_pairs;
-}sm;
+#include "utils.h"
 
 char *read_message(char *secretemessage_path, char missing_alphabet_letter, char missing_char);
 sm *init_message_E(char *str);

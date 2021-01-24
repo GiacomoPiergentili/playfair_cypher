@@ -27,4 +27,8 @@ void find_repetition(k *key);
 void clear_alphabet(al *alphabet, k *key);
 char find_missing_letter(al *alphabet);
 
+void free_alphabet(al *alphabet);
+void free_key(k *key);
+void free_keyfile(kf *keyfile);
+
 #endif //PLAYFAIR_CYPHER_KEYFILE_READ_H

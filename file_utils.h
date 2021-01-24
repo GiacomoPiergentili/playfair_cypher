@@ -9,6 +9,6 @@ void create_file(sm *message, char *name);
 void create_decoded_file(sm *message, char *name);
 char *gen_pf_path(char *secretemessage_path, char *dir_path);
 char *gen_dec_path(char *secretemessage_path, char *dir_path);
-void strip_ext(char *fname);
+void remove_ext(char *name);
 
 #endif //PLAYFAIR_CYPHER_FILE_UTILS_H

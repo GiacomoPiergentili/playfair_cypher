@@ -46,7 +46,7 @@ char *gen_pf_path(char *secretemessage_path, char *dir_path) {
     strcat(name, dir_path);
     strcat(name, "/");
     strcat(name, basename(secretemessage_path));
-    strip_ext(name);
+    remove_ext(name);
     strcat(name, ".pf");
     return name;
 }
@@ -56,19 +56,18 @@ char *gen_dec_path(char *secretemessage_path, char *dir_path) {
     strcat(name, dir_path);
     strcat(name, "/");
     strcat(name, basename(secretemessage_path));
-    strip_ext(name);
+    remove_ext(name);
     strcat(name, ".dec");
     return name;
 }
 
-void strip_ext(char *fname) { //https://stackoverflow.com/questions/43163677/how-do-i-strip-a-file-extension-from-a-string-in-c/43163761
-    char *end = fname + strlen(fname);
+void remove_ext(char *name) { //https://stackoverflow.com/questions/43163677/how-do-i-strip-a-file-extension-from-a-string-in-c/43163761
+    char *end = name + strlen(name);
 
-    while (end > fname && *end != '.') {
+    while (end > name && *end != '.' && *end != '\\' && *end != '/') {
         --end;
     }
-
-    if (end > fname) {
+    if ((end > name && *end == '.') && (*(end - 1) != '\\' && *(end - 1) != '/')) {
         *end = '\0';
     }
 }

@@ -16,5 +16,5 @@ int main(int argc, char *argv[]) {
     }
     else
         printf("%s", "UNKNOWN COMMAND");
-    free(keyfile);
+    free_keyfile(keyfile);
 }
