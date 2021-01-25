@@ -62,7 +62,6 @@ char *gen_dec_path(char *secretemessage_path, char *dir_path) {
 
 void remove_ext(char *name) { //https://stackoverflow.com/questions/43163677/how-do-i-strip-a-file-extension-from-a-string-in-c/43163761
     char *end = name + strlen(name);
-
     while (end > name && *end != '.' && *end != '\\' && *end != '/') {
         --end;
     }

@@ -12,9 +12,9 @@ char **initialize_matrix(char **matrix, int nr, int nc) {
     return matrix;
 }
 
-void free_matrix(char **matrix) {
+void free_matrix(char **matrix, int nr) {
     if (matrix != NULL) {
-        for (int i = 0; i < 5; ++i) {
+        for (int i = 0; i < nr; ++i) {
             free(matrix[i]);
             matrix[i] = NULL;
         }

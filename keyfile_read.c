@@ -89,7 +89,7 @@ void free_keyfile(kf *keyfile) {
     keyfile->alphabet = NULL;
     free_key(keyfile->key);
     keyfile->key = NULL;
-    free_matrix(keyfile->matrix);
+    free_matrix(keyfile->matrix, 5);
     keyfile->matrix = NULL;
     free(keyfile);
     keyfile = NULL;

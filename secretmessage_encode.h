@@ -18,7 +18,4 @@ void different_r_c(char **encoded_pairs, char **matrix, int pos1[], int pos2[], 
 void same_row(char **encoded_pairs, char **matrix, int pos1[], int pos2[], int r);
 void same_column(char **encoded_pairs, char **matrix, int pos1[], int pos2[], int r);
 
-
-
-
 #endif //PLAYFAIR_CYPHER_SECRETMESSAGE_ENCODE_H

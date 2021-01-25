@@ -16,5 +16,4 @@ void same_column_D(char **pairs, char **matrix, int pos1[], int pos2[], int r);
 
 void check_odd (char *str);
 
-
 #endif //PLAYFAIR_CYPHER_SECRETMESSAGE_DECODE_H
