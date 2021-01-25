@@ -1,11 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "message_utils.h"
 #include "utils.h"
 #include "secretmessage_encode.h"
 #include "matrix_utils.h"
 
 char *read_message(char *secretemessage_path, char missing_alphabet_letter, char missing_char) {
     FILE *smp = fopen(secretemessage_path, "r");
+    check_exist(smp);
     char *str = read_file(smp);
     str = remove_spaces(str);
     return remove_missing_alphabet_letter(str, missing_alphabet_letter, missing_char);
@@ -17,30 +19,6 @@ sm *init_message_E(char *str) {
     message->pairs = initialize_matrix(message->pairs, message->size / 2, 2);
     message->encoded_pairs = initialize_matrix(message->encoded_pairs, message->size / 2, 2);
     return message;
-}
-
-int find_m_size(char *str) {
-    int size = 0;
-    int size_str = size_of_string(str);
-    for (int i = 0; i < size_str; i++) {
-        if (str[i] == str[i + 1]) {
-            size += 2;
-        } else {
-            size += 2;
-            i++;
-        }
-    }
-    if (size % 2 != 0)
-        size++;
-    return size;
-}
-
-char *remove_missing_alphabet_letter(char *str, char missing_alphabet_letter, char missing_char) {
-    for (int i = 0; i < size_of_string(str); i++) {
-        if (str[i] == missing_alphabet_letter)
-            str[i] = missing_char;
-    }
-    return str;
 }
 
 sm *create_message(char *secretemessage_path, kf *keyfile) {

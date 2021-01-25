@@ -1,11 +1,31 @@
 #include <stdlib.h>
+#include <memory.h>
 #include "commands.h"
-#include "matrix_gen.h"
+#include "keyfile_gen.h"
 #include "secretmessage_encode.h"
 #include "secretmessage_decode.h"
 #include "file_utils.h"
 #include "utils.h"
 
+
+void process_command(int argc, char *argv[]) {
+    kf *keyfile = complete_keyfile(argv[2]);
+    if (strcmp(argv[1], "encode") == 0) {
+        for (int i = 4; i < argc; i++) {
+            encode(keyfile, argv[i], argv[3]);
+        }
+    } else if (strcmp(argv[1], "decode") == 0) {
+        for (int i = 4; i < argc; i++) {
+            decode(keyfile, argv[i], argv[3]);
+        }
+    }
+    else {
+        printf("%s", "UNKNOWN COMMAND");
+        exit(1);
+    }
+    free_keyfile(keyfile);
+    exit(0);
+}
 
 void encode(kf *keyfile, char *secretemessage_path, char *dir_path) {
     char *name = gen_pf_path(secretemessage_path, dir_path);
@@ -21,9 +41,5 @@ void decode(kf *keyfile, char *encodedmessage_path, char *dir_path) {
     create_decoded_file(message, name);
     free_message(message);
     free(name);
-}
-
-kf *gen_kf(char *kf_path) {
-    return complete_keyfile(kf_path);
 }
 

@@ -1,13 +1,11 @@
 #ifndef PLAYFAIR_CYPHER_SECRETMESSAGE_ENCODE_H
 #define PLAYFAIR_CYPHER_SECRETMESSAGE_ENCODE_H
 
-#include "keyfile_read.h"
+#include "message_utils.h"
 #include "utils.h"
 
 char *read_message(char *secretemessage_path, char missing_alphabet_letter, char missing_char);
 sm *init_message_E(char *str);
-int find_m_size(char *str);
-char *remove_missing_alphabet_letter(char *str, char missing_alphabet_letter, char missing_char);
 sm *create_message(char *secretemessage_path, kf *keyfile);
 
 void fill_pairs_E(char **pairs, char *str, int size_m, char special_c);

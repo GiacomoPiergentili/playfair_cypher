@@ -1,5 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
+#include "message_utils.h"
 #include "utils.h"
 #include "matrix_utils.h"
 #include "secretmessage_encode.h"
@@ -7,6 +9,7 @@
 
 char *read_encoded_message(char *encodedmessage_path) {
     FILE *smp = fopen(encodedmessage_path, "r");
+    check_exist(smp);
     char *str = read_file(smp);
     return (remove_spaces(str));
 }
@@ -14,14 +17,14 @@ char *read_encoded_message(char *encodedmessage_path) {
 sm *create_encoded_message(char *encodedmessage_path, kf *keyfile) {
     char *str = read_encoded_message(encodedmessage_path);
     sm *message = init_message_D(str);
-    fill_encoded_pairs_D(size_of_string(str), str, message->encoded_pairs, keyfile->missing_alphabet_letter);
+    fill_encoded_pairs_D(strlen(str), str, message->encoded_pairs, keyfile->missing_alphabet_letter);
     fill_pairs_D(message->pairs, message->encoded_pairs, keyfile->matrix, message->size);
     return message;
 }
 
 sm *init_message_D(char *str) {
     sm *message = malloc(sizeof(sm) + 1);
-    message->size = size_of_string(str);
+    message->size = strlen(str);
     message->pairs = initialize_matrix(message->pairs, message->size / 2, 2);
     message->encoded_pairs = initialize_matrix(message->encoded_pairs, message->size / 2, 2);
     return message;
@@ -34,7 +37,7 @@ void fill_encoded_pairs_D(int size, char *str, char **encoded_pairs, char missin
         if (i < size) {
             if (str[i] == missing_alphabet_letter || str[i + 1] == missing_alphabet_letter) {
                 printf("%s", "CAN'T DECYPHER");
-                exit(0);
+                exit(1);
             } else {
                 encoded_pairs[r][0] = str[i];
                 encoded_pairs[r][1] = str[i + 1];
@@ -58,6 +61,7 @@ void fill_pairs_D(char **pairs, char **encoded_pairs, char **matrix, int size) {
             same_column_D(pairs, matrix, pos1, pos2, r);
         } else {
             printf("%s", "CAN'T DECYPHER");
+            exit(1);
         }
     }
 }
@@ -94,8 +98,8 @@ void same_column_D(char **pairs, char **matrix, int pos1[], int pos2[], int r) {
 }
 
 void check_odd(char *str) {
-    if (size_of_string(str) % 2 != 0) {
+    if (strlen(str) % 2 != 0) {
         printf("%s", "CAN'T DECYPHER");
-        exit(0);
+        exit(1);
     }
 }

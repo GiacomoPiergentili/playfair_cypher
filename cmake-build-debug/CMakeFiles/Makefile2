@@ -73,7 +73,7 @@ CMAKE_BINARY_DIR = /home/giacomo/CLionProjects/playfair_cypher/cmake-build-debug
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/playfair_cypher.dir/all
+all: CMakeFiles/playfair.dir/all
 
 .PHONY : all
 
@@ -83,36 +83,36 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/playfair_cypher.dir/clean
+clean: CMakeFiles/playfair.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/playfair_cypher.dir
+# Target rules for target CMakeFiles/playfair.dir
 
 # All Build rule for target.
-CMakeFiles/playfair_cypher.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair_cypher.dir/build.make CMakeFiles/playfair_cypher.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair_cypher.dir/build.make CMakeFiles/playfair_cypher.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/giacomo/CLionProjects/playfair_cypher/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10 "Built target playfair_cypher"
-.PHONY : CMakeFiles/playfair_cypher.dir/all
+CMakeFiles/playfair.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair.dir/build.make CMakeFiles/playfair.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair.dir/build.make CMakeFiles/playfair.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/giacomo/CLionProjects/playfair_cypher/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11 "Built target playfair"
+.PHONY : CMakeFiles/playfair.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/playfair_cypher.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/giacomo/CLionProjects/playfair_cypher/cmake-build-debug/CMakeFiles 10
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/playfair_cypher.dir/all
+CMakeFiles/playfair.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/giacomo/CLionProjects/playfair_cypher/cmake-build-debug/CMakeFiles 11
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/playfair.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/giacomo/CLionProjects/playfair_cypher/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/playfair_cypher.dir/rule
+.PHONY : CMakeFiles/playfair.dir/rule
 
 # Convenience name for target.
-playfair_cypher: CMakeFiles/playfair_cypher.dir/rule
+playfair: CMakeFiles/playfair.dir/rule
 
-.PHONY : playfair_cypher
+.PHONY : playfair
 
 # clean rule for target.
-CMakeFiles/playfair_cypher.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair_cypher.dir/build.make CMakeFiles/playfair_cypher.dir/clean
-.PHONY : CMakeFiles/playfair_cypher.dir/clean
+CMakeFiles/playfair.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair.dir/build.make CMakeFiles/playfair.dir/clean
+.PHONY : CMakeFiles/playfair.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <ctype.h>
 #include "utils.h"
-#include "matrix_utils.h"
 
 long find_size(FILE *fp) {
     fseek(fp, 0L, SEEK_END);
@@ -38,19 +37,9 @@ char *remove_spaces(char *str) {
     return out;
 }
 
-int size_of_string(char *str) {
-    int size = 0;
-    while (str[size] != '\0') {
-        size++;
+void check_exist(FILE *fp) {
+    if (fp == NULL) {
+        printf("%s", "FILE NOT FOUND");
+        exit(1);
     }
-    return size;
-}
-
-void free_message(sm *message) {
-    free_matrix(message->pairs, message->size/2);
-    message->pairs = NULL;
-    free_matrix(message->encoded_pairs, message->size/2);
-    message->encoded_pairs = NULL;
-    free(message);
-    message = NULL;
 }

@@ -7,7 +7,9 @@
 
 void read_all(char *keyfile_path, kf *keyfile) {
     FILE *kfp = fopen(keyfile_path, "r");
+    check_exist(kfp);
     char *str = read_file(kfp);
+    check_keyfile(str);
     char *token = strtok(str, "\r\n");
     keyfile->alphabet->alphabet = token;
     keyfile->alphabet->flag = malloc(25 * sizeof(int));
@@ -17,7 +19,7 @@ void read_all(char *keyfile_path, kf *keyfile) {
     keyfile->special_char = token[0];
     token = strtok(NULL, "\r\n");
     keyfile->key->key = remove_spaces(token);
-    keyfile->key->size = size_of_string(keyfile->key->key);
+    keyfile->key->size = strlen(keyfile->key->key);
     keyfile->key->flag = malloc(keyfile->key->size * sizeof(int));
 }
 
@@ -38,7 +40,7 @@ void find_repetition(k *key) {
 }
 
 void clear_alphabet(al *alphabet, k *key) {
-    for (int i = 0; i < size_of_string(key->key); i++) {
+    for (int i = 0; i < strlen(key->key); i++) {
         if (key->flag[i] == 0) {
             for (int j = 0; j < 25; j++) {
                 if (key->key[i] == alphabet->alphabet[j]) {
@@ -78,12 +80,14 @@ void free_alphabet(al *alphabet) {
     free(alphabet);
     alphabet = NULL;
 }
+
 void free_key(k *key) {
     free(key->flag);
     key->flag = NULL;
     free(key);
     key = NULL;
 };
+
 void free_keyfile(kf *keyfile) {
     free_alphabet(keyfile->alphabet);
     keyfile->alphabet = NULL;
@@ -94,3 +98,18 @@ void free_keyfile(kf *keyfile) {
     free(keyfile);
     keyfile = NULL;
 };
+
+void check_keyfile(char *str) {
+    char *str1 = malloc(sizeof(char)*(strlen(str)+1));
+    strcpy(str1, str);
+    char *token = strtok(str1, "\r\n");;
+    for (int i = 0; i < 4; i++) {
+        if (token == NULL) {
+            printf("CAN'T GENERATE KEYFILE");
+            exit(1);
+        } else {
+            token = strtok(NULL, "\r\n");
+        }
+    }
+    free(str1);
+}

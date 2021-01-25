@@ -131,17 +131,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named playfair_cypher
+# Target rules for targets named playfair
 
 # Build rule for target.
-playfair_cypher: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 playfair_cypher
-.PHONY : playfair_cypher
+playfair: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 playfair
+.PHONY : playfair
 
 # fast build rule for target.
-playfair_cypher/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair_cypher.dir/build.make CMakeFiles/playfair_cypher.dir/build
-.PHONY : playfair_cypher/fast
+playfair/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair.dir/build.make CMakeFiles/playfair.dir/build
+.PHONY : playfair/fast
 
 commands.o: commands.c.o
 
@@ -149,7 +149,7 @@ commands.o: commands.c.o
 
 # target to build an object file
 commands.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair_cypher.dir/build.make CMakeFiles/playfair_cypher.dir/commands.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair.dir/build.make CMakeFiles/playfair.dir/commands.c.o
 .PHONY : commands.c.o
 
 commands.i: commands.c.i
@@ -158,7 +158,7 @@ commands.i: commands.c.i
 
 # target to preprocess a source file
 commands.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair_cypher.dir/build.make CMakeFiles/playfair_cypher.dir/commands.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair.dir/build.make CMakeFiles/playfair.dir/commands.c.i
 .PHONY : commands.c.i
 
 commands.s: commands.c.s
@@ -167,7 +167,7 @@ commands.s: commands.c.s
 
 # target to generate assembly for a file
 commands.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair_cypher.dir/build.make CMakeFiles/playfair_cypher.dir/commands.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair.dir/build.make CMakeFiles/playfair.dir/commands.c.s
 .PHONY : commands.c.s
 
 file_utils.o: file_utils.c.o
@@ -176,7 +176,7 @@ file_utils.o: file_utils.c.o
 
 # target to build an object file
 file_utils.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair_cypher.dir/build.make CMakeFiles/playfair_cypher.dir/file_utils.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair.dir/build.make CMakeFiles/playfair.dir/file_utils.c.o
 .PHONY : file_utils.c.o
 
 file_utils.i: file_utils.c.i
@@ -185,7 +185,7 @@ file_utils.i: file_utils.c.i
 
 # target to preprocess a source file
 file_utils.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair_cypher.dir/build.make CMakeFiles/playfair_cypher.dir/file_utils.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair.dir/build.make CMakeFiles/playfair.dir/file_utils.c.i
 .PHONY : file_utils.c.i
 
 file_utils.s: file_utils.c.s
@@ -194,8 +194,35 @@ file_utils.s: file_utils.c.s
 
 # target to generate assembly for a file
 file_utils.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair_cypher.dir/build.make CMakeFiles/playfair_cypher.dir/file_utils.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair.dir/build.make CMakeFiles/playfair.dir/file_utils.c.s
 .PHONY : file_utils.c.s
+
+keyfile_gen.o: keyfile_gen.c.o
+
+.PHONY : keyfile_gen.o
+
+# target to build an object file
+keyfile_gen.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair.dir/build.make CMakeFiles/playfair.dir/keyfile_gen.c.o
+.PHONY : keyfile_gen.c.o
+
+keyfile_gen.i: keyfile_gen.c.i
+
+.PHONY : keyfile_gen.i
+
+# target to preprocess a source file
+keyfile_gen.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair.dir/build.make CMakeFiles/playfair.dir/keyfile_gen.c.i
+.PHONY : keyfile_gen.c.i
+
+keyfile_gen.s: keyfile_gen.c.s
+
+.PHONY : keyfile_gen.s
+
+# target to generate assembly for a file
+keyfile_gen.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair.dir/build.make CMakeFiles/playfair.dir/keyfile_gen.c.s
+.PHONY : keyfile_gen.c.s
 
 keyfile_read.o: keyfile_read.c.o
 
@@ -203,7 +230,7 @@ keyfile_read.o: keyfile_read.c.o
 
 # target to build an object file
 keyfile_read.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair_cypher.dir/build.make CMakeFiles/playfair_cypher.dir/keyfile_read.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair.dir/build.make CMakeFiles/playfair.dir/keyfile_read.c.o
 .PHONY : keyfile_read.c.o
 
 keyfile_read.i: keyfile_read.c.i
@@ -212,7 +239,7 @@ keyfile_read.i: keyfile_read.c.i
 
 # target to preprocess a source file
 keyfile_read.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair_cypher.dir/build.make CMakeFiles/playfair_cypher.dir/keyfile_read.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair.dir/build.make CMakeFiles/playfair.dir/keyfile_read.c.i
 .PHONY : keyfile_read.c.i
 
 keyfile_read.s: keyfile_read.c.s
@@ -221,7 +248,7 @@ keyfile_read.s: keyfile_read.c.s
 
 # target to generate assembly for a file
 keyfile_read.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair_cypher.dir/build.make CMakeFiles/playfair_cypher.dir/keyfile_read.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair.dir/build.make CMakeFiles/playfair.dir/keyfile_read.c.s
 .PHONY : keyfile_read.c.s
 
 main.o: main.c.o
@@ -230,7 +257,7 @@ main.o: main.c.o
 
 # target to build an object file
 main.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair_cypher.dir/build.make CMakeFiles/playfair_cypher.dir/main.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair.dir/build.make CMakeFiles/playfair.dir/main.c.o
 .PHONY : main.c.o
 
 main.i: main.c.i
@@ -239,7 +266,7 @@ main.i: main.c.i
 
 # target to preprocess a source file
 main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair_cypher.dir/build.make CMakeFiles/playfair_cypher.dir/main.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair.dir/build.make CMakeFiles/playfair.dir/main.c.i
 .PHONY : main.c.i
 
 main.s: main.c.s
@@ -248,35 +275,8 @@ main.s: main.c.s
 
 # target to generate assembly for a file
 main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair_cypher.dir/build.make CMakeFiles/playfair_cypher.dir/main.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair.dir/build.make CMakeFiles/playfair.dir/main.c.s
 .PHONY : main.c.s
-
-matrix_gen.o: matrix_gen.c.o
-
-.PHONY : matrix_gen.o
-
-# target to build an object file
-matrix_gen.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair_cypher.dir/build.make CMakeFiles/playfair_cypher.dir/matrix_gen.c.o
-.PHONY : matrix_gen.c.o
-
-matrix_gen.i: matrix_gen.c.i
-
-.PHONY : matrix_gen.i
-
-# target to preprocess a source file
-matrix_gen.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair_cypher.dir/build.make CMakeFiles/playfair_cypher.dir/matrix_gen.c.i
-.PHONY : matrix_gen.c.i
-
-matrix_gen.s: matrix_gen.c.s
-
-.PHONY : matrix_gen.s
-
-# target to generate assembly for a file
-matrix_gen.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair_cypher.dir/build.make CMakeFiles/playfair_cypher.dir/matrix_gen.c.s
-.PHONY : matrix_gen.c.s
 
 matrix_utils.o: matrix_utils.c.o
 
@@ -284,7 +284,7 @@ matrix_utils.o: matrix_utils.c.o
 
 # target to build an object file
 matrix_utils.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair_cypher.dir/build.make CMakeFiles/playfair_cypher.dir/matrix_utils.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair.dir/build.make CMakeFiles/playfair.dir/matrix_utils.c.o
 .PHONY : matrix_utils.c.o
 
 matrix_utils.i: matrix_utils.c.i
@@ -293,7 +293,7 @@ matrix_utils.i: matrix_utils.c.i
 
 # target to preprocess a source file
 matrix_utils.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair_cypher.dir/build.make CMakeFiles/playfair_cypher.dir/matrix_utils.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair.dir/build.make CMakeFiles/playfair.dir/matrix_utils.c.i
 .PHONY : matrix_utils.c.i
 
 matrix_utils.s: matrix_utils.c.s
@@ -302,8 +302,35 @@ matrix_utils.s: matrix_utils.c.s
 
 # target to generate assembly for a file
 matrix_utils.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair_cypher.dir/build.make CMakeFiles/playfair_cypher.dir/matrix_utils.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair.dir/build.make CMakeFiles/playfair.dir/matrix_utils.c.s
 .PHONY : matrix_utils.c.s
+
+message_utils.o: message_utils.c.o
+
+.PHONY : message_utils.o
+
+# target to build an object file
+message_utils.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair.dir/build.make CMakeFiles/playfair.dir/message_utils.c.o
+.PHONY : message_utils.c.o
+
+message_utils.i: message_utils.c.i
+
+.PHONY : message_utils.i
+
+# target to preprocess a source file
+message_utils.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair.dir/build.make CMakeFiles/playfair.dir/message_utils.c.i
+.PHONY : message_utils.c.i
+
+message_utils.s: message_utils.c.s
+
+.PHONY : message_utils.s
+
+# target to generate assembly for a file
+message_utils.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair.dir/build.make CMakeFiles/playfair.dir/message_utils.c.s
+.PHONY : message_utils.c.s
 
 secretmessage_decode.o: secretmessage_decode.c.o
 
@@ -311,7 +338,7 @@ secretmessage_decode.o: secretmessage_decode.c.o
 
 # target to build an object file
 secretmessage_decode.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair_cypher.dir/build.make CMakeFiles/playfair_cypher.dir/secretmessage_decode.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair.dir/build.make CMakeFiles/playfair.dir/secretmessage_decode.c.o
 .PHONY : secretmessage_decode.c.o
 
 secretmessage_decode.i: secretmessage_decode.c.i
@@ -320,7 +347,7 @@ secretmessage_decode.i: secretmessage_decode.c.i
 
 # target to preprocess a source file
 secretmessage_decode.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair_cypher.dir/build.make CMakeFiles/playfair_cypher.dir/secretmessage_decode.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair.dir/build.make CMakeFiles/playfair.dir/secretmessage_decode.c.i
 .PHONY : secretmessage_decode.c.i
 
 secretmessage_decode.s: secretmessage_decode.c.s
@@ -329,7 +356,7 @@ secretmessage_decode.s: secretmessage_decode.c.s
 
 # target to generate assembly for a file
 secretmessage_decode.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair_cypher.dir/build.make CMakeFiles/playfair_cypher.dir/secretmessage_decode.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair.dir/build.make CMakeFiles/playfair.dir/secretmessage_decode.c.s
 .PHONY : secretmessage_decode.c.s
 
 secretmessage_encode.o: secretmessage_encode.c.o
@@ -338,7 +365,7 @@ secretmessage_encode.o: secretmessage_encode.c.o
 
 # target to build an object file
 secretmessage_encode.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair_cypher.dir/build.make CMakeFiles/playfair_cypher.dir/secretmessage_encode.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair.dir/build.make CMakeFiles/playfair.dir/secretmessage_encode.c.o
 .PHONY : secretmessage_encode.c.o
 
 secretmessage_encode.i: secretmessage_encode.c.i
@@ -347,7 +374,7 @@ secretmessage_encode.i: secretmessage_encode.c.i
 
 # target to preprocess a source file
 secretmessage_encode.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair_cypher.dir/build.make CMakeFiles/playfair_cypher.dir/secretmessage_encode.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair.dir/build.make CMakeFiles/playfair.dir/secretmessage_encode.c.i
 .PHONY : secretmessage_encode.c.i
 
 secretmessage_encode.s: secretmessage_encode.c.s
@@ -356,7 +383,7 @@ secretmessage_encode.s: secretmessage_encode.c.s
 
 # target to generate assembly for a file
 secretmessage_encode.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair_cypher.dir/build.make CMakeFiles/playfair_cypher.dir/secretmessage_encode.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair.dir/build.make CMakeFiles/playfair.dir/secretmessage_encode.c.s
 .PHONY : secretmessage_encode.c.s
 
 utils.o: utils.c.o
@@ -365,7 +392,7 @@ utils.o: utils.c.o
 
 # target to build an object file
 utils.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair_cypher.dir/build.make CMakeFiles/playfair_cypher.dir/utils.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair.dir/build.make CMakeFiles/playfair.dir/utils.c.o
 .PHONY : utils.c.o
 
 utils.i: utils.c.i
@@ -374,7 +401,7 @@ utils.i: utils.c.i
 
 # target to preprocess a source file
 utils.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair_cypher.dir/build.make CMakeFiles/playfair_cypher.dir/utils.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair.dir/build.make CMakeFiles/playfair.dir/utils.c.i
 .PHONY : utils.c.i
 
 utils.s: utils.c.s
@@ -383,7 +410,7 @@ utils.s: utils.c.s
 
 # target to generate assembly for a file
 utils.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair_cypher.dir/build.make CMakeFiles/playfair_cypher.dir/utils.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/playfair.dir/build.make CMakeFiles/playfair.dir/utils.c.s
 .PHONY : utils.c.s
 
 # Help Target
@@ -394,25 +421,28 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... playfair_cypher"
+	@echo "... playfair"
 	@echo "... commands.o"
 	@echo "... commands.i"
 	@echo "... commands.s"
 	@echo "... file_utils.o"
 	@echo "... file_utils.i"
 	@echo "... file_utils.s"
+	@echo "... keyfile_gen.o"
+	@echo "... keyfile_gen.i"
+	@echo "... keyfile_gen.s"
 	@echo "... keyfile_read.o"
 	@echo "... keyfile_read.i"
 	@echo "... keyfile_read.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... matrix_gen.o"
-	@echo "... matrix_gen.i"
-	@echo "... matrix_gen.s"
 	@echo "... matrix_utils.o"
 	@echo "... matrix_utils.i"
 	@echo "... matrix_utils.s"
+	@echo "... message_utils.o"
+	@echo "... message_utils.i"
+	@echo "... message_utils.s"
 	@echo "... secretmessage_decode.o"
 	@echo "... secretmessage_decode.i"
 	@echo "... secretmessage_decode.s"

@@ -1,5 +1,5 @@
 #include <stdlib.h>
-#include "matrix_gen.h"
+#include "keyfile_gen.h"
 #include "matrix_utils.h"
 #include "keyfile_read.h"
 
@@ -19,7 +19,7 @@ kf *complete_keyfile(char *keyfile_path) {
 void fill_matrix(kf *keyfile) {
     int last_r, last_c;
     write_key(keyfile->matrix, keyfile->key, &last_r, &last_c);
-    write_alphabet(keyfile->matrix, keyfile->alphabet, &last_r, &last_c);
+    write_alphabet(keyfile->matrix, keyfile->alphabet, last_r, last_c);
 }
 
 void write_key(char **matrix, k *key, int *last_r, int *last_c) {
@@ -39,16 +39,16 @@ void write_key(char **matrix, k *key, int *last_r, int *last_c) {
     }
 }
 
-void write_alphabet(char **matrix, al *alphabet, int *last_r, int *last_c) {
+void write_alphabet(char **matrix, al *alphabet, int last_r, int last_c) {
     int last_alphabet_pos = -1;
     int r, c;
-    if ((*last_r < 4 && *last_c < 4) || (*last_r == 4 && *last_c < 4)) {
-        r = *last_r;
-        c = *last_c + 1;
-    } else if (*last_r < 4 && *last_c == 4) {
-        r = *last_r + 1;
+    if ((last_r < 4 && last_c < 4) || (last_r == 4 && last_c < 4)) {
+        r = last_r;
+        c = last_c + 1;
+    } else if (last_r < 4 && last_c == 4) {
+        r = last_r + 1;
         c = 0;
-    } else if (*last_r == 4 && *last_c == 4) {
+    } else if (last_r == 4 && last_c == 4) {
         exit(0);
     }
     for (; r < 5; r++) {

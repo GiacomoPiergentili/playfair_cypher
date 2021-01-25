@@ -30,5 +30,6 @@ char find_missing_letter(al *alphabet);
 void free_alphabet(al *alphabet);
 void free_key(k *key);
 void free_keyfile(kf *keyfile);
+void check_keyfile(char *str);
 
 #endif //PLAYFAIR_CYPHER_KEYFILE_READ_H
