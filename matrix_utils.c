@@ -1,6 +1,7 @@
+#include <stdlib.h>
+#include <stdio.h>
 #include "matrix_utils.h"
-#include "stdlib.h"
-#include "stdio.h"
+
 
 char **initialize_matrix(char **matrix, int nr, int nc) {
     int i;

@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include "matrix_gen.h"
 #include "matrix_utils.h"

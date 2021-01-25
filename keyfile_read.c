@@ -72,16 +72,25 @@ char find_missing_letter(al *alphabet) {
 
 void free_alphabet(al *alphabet) {
     free(alphabet->alphabet);
+    alphabet->alphabet = NULL;
     free(alphabet->flag);
+    alphabet->flag = NULL;
     free(alphabet);
+    alphabet = NULL;
 }
 void free_key(k *key) {
     free(key->flag);
+    key->flag = NULL;
     free(key);
+    key = NULL;
 };
 void free_keyfile(kf *keyfile) {
     free_alphabet(keyfile->alphabet);
+    keyfile->alphabet = NULL;
     free_key(keyfile->key);
+    keyfile->key = NULL;
     free_matrix(keyfile->matrix);
+    keyfile->matrix = NULL;
     free(keyfile);
+    keyfile = NULL;
 };

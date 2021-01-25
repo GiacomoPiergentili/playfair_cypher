@@ -1,5 +1,4 @@
 #include <stdlib.h>
-
 #include "commands.h"
 #include "matrix_gen.h"
 #include "secretmessage_encode.h"
