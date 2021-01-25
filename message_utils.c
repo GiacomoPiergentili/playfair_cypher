@@ -27,7 +27,6 @@ char *remove_missing_alphabet_letter(char *str, char missing_alphabet_letter, ch
     return str;
 }
 
-
 void free_message(sm *message) {
     free_matrix(message->pairs, message->size/2);
     message->pairs = NULL;

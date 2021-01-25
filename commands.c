@@ -7,7 +7,6 @@
 #include "file_utils.h"
 #include "utils.h"
 
-
 void process_command(int argc, char *argv[]) {
     kf *keyfile = complete_keyfile(argv[2]);
     if (strcmp(argv[1], "encode") == 0) {

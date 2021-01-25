@@ -23,7 +23,6 @@ void free_matrix(char **matrix, int nr) {
     }
 }
 
-
 void print_matrix(char **matrix, int nr, int nc) {
     int row, columns;
     for (row = 0; row < nr; row++) {
