@@ -90,11 +90,8 @@ void free_key(k *key) {
 
 void free_keyfile(kf *keyfile) {
     free_alphabet(keyfile->alphabet);
-    keyfile->alphabet = NULL;
     free_key(keyfile->key);
-    keyfile->key = NULL;
     free_matrix(keyfile->matrix, 5);
-    keyfile->matrix = NULL;
     free(keyfile);
     keyfile = NULL;
 };
