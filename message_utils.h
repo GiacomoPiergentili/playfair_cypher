@@ -9,6 +9,7 @@ typedef struct message{
 
 int find_m_size(char *str);
 char *remove_missing_alphabet_letter(char *str, char missing_alphabet_letter, char missing_char);
+void find_position(int *pos, char **matrix, char letter);
 void free_message(sm *message);
 
 #endif //PLAYFAIR_CYPHER_MESSAGE_UTILS_H

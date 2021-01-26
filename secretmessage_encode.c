@@ -70,17 +70,6 @@ void fill_encoded_pairs_E(char **pairs, char **encoded_pairs, char **matrix, int
     }
 }
 
-void find_position(int *pos, char **matrix, char letter) {
-    for (int r = 0; r < 5; r++) {
-        for (int c = 0; c < 5; c++) {
-            if (matrix[r][c] == letter) {
-                pos[0] = r;
-                pos[1] = c;
-            }
-        }
-    }
-}
-
 void different_r_c(char **encoded_pairs, char **matrix, int pos1[], int pos2[], int r) {
     encoded_pairs[r][0] = matrix[pos1[0]][pos2[1]];
     encoded_pairs[r][1] = matrix[pos2[0]][pos1[1]];

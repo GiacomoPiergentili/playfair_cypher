@@ -11,7 +11,6 @@ sm *create_message(char *secretemessage_path, kf *keyfile);
 void fill_pairs_E(char **pairs, char *str, int size_m, char special_c);
 
 void fill_encoded_pairs_E(char **pairs, char **encoded_pairs, char **matrix, int size_m);
-void find_position(int *pos, char **matrix, char letter);
 void different_r_c(char **encoded_pairs, char **matrix, int pos1[], int pos2[], int r);
 void same_row(char **encoded_pairs, char **matrix, int pos1[], int pos2[], int r);
 void same_column(char **encoded_pairs, char **matrix, int pos1[], int pos2[], int r);
