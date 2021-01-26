@@ -59,9 +59,9 @@ void fill_encoded_pairs_E(char **pairs, char **encoded_pairs, char **matrix, int
     for (int r = 0; r < size_m / 2; r++) {
         find_position(pos1, matrix, pairs[r][0]);
         find_position(pos2, matrix, pairs[r][1]);
-        if (pos1[0] != pos2[0] && pos1[1] != pos2[1]) { //righe e colonne diverse
+        if (pos1[0] != pos2[0] && pos1[1] != pos2[1]) {
             different_r_c(encoded_pairs, matrix, pos1, pos2, r);
-        } else if (pos1[0] == pos2[0]) { //stessa riga
+        } else if (pos1[0] == pos2[0]) {
             same_row(encoded_pairs, matrix, pos1, pos2, r);
         } else {
             same_column(encoded_pairs, matrix, pos1, pos2, r);
