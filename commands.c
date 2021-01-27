@@ -19,11 +19,10 @@ void process_command(int argc, char *argv[]) {
         }
     }
     else {
-        printf("%s", "UNKNOWN COMMAND");
+        printf("UNKNOWN COMMAND");
         exit(1);
     }
     free_keyfile(keyfile);
-    exit(0);
 }
 
 void encode(kf *keyfile, char *secretemessage_path, char *dir_path) {

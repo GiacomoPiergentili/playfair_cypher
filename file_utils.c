@@ -6,7 +6,7 @@
 #include "secretmessage_encode.h"
 
 char *get_message(sm *message) {
-    char *smessage = malloc(sizeof(char) * (message->size + message->size/2));
+    char *smessage = malloc(sizeof(char) * (message->size + message->size/2) + 1);
     for (int i = 0; i < message -> size / 2; i++) {
         strcat(smessage, message -> encoded_pairs[i]);
         strcat(smessage, " ");
@@ -15,7 +15,7 @@ char *get_message(sm *message) {
 }
 
 char *get_decoded_message(sm *message) {
-    char *smessage = malloc(sizeof(char) * (message->size + message->size/2));
+    char *smessage = malloc(sizeof(char) * (message->size + message->size/2) + 1);
     for (int i = 0; i < message -> size / 2; i++) {
         strcat(smessage, message -> pairs[i]);
     }
@@ -41,7 +41,7 @@ void create_decoded_file(sm *message, char *name) {
 }
 
 char *gen_pf_path(char *secretemessage_path, char *dir_path) {
-    char *name = malloc(sizeof(char) * (strlen(dir_path) + strlen(basename(secretemessage_path) + 3)));
+    char *name = malloc(sizeof(char) * (strlen(dir_path) + strlen(basename(secretemessage_path) + 4)));
     strcat(name, dir_path);
     strcat(name, "/");
     strcat(name, basename(secretemessage_path));
@@ -51,7 +51,7 @@ char *gen_pf_path(char *secretemessage_path, char *dir_path) {
 }
 
 char *gen_dec_path(char *secretemessage_path, char *dir_path) {
-    char *name = malloc(sizeof(char) * (strlen(dir_path) + strlen(basename(secretemessage_path) + 3)));
+    char *name = malloc(sizeof(char) * (strlen(dir_path) + strlen(basename(secretemessage_path) + 5)));
     strcat(name, dir_path);
     strcat(name, "/");
     strcat(name, basename(secretemessage_path));
