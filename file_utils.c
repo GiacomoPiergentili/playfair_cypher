@@ -45,7 +45,7 @@ void create_decoded_file(sm *message, char *name) {
 
 char *gen_pf_path(char *secretemessage_path, char *dir_path) {
     char *name = malloc(sizeof(char) * (strlen(dir_path) + strlen(basename(secretemessage_path) + 4)));
-    strcat(name, dir_path);
+    strcpy(name, dir_path);
     strcat(name, "/");
     strcat(name, basename(secretemessage_path));
     remove_ext(name);
@@ -55,7 +55,7 @@ char *gen_pf_path(char *secretemessage_path, char *dir_path) {
 
 char *gen_dec_path(char *secretemessage_path, char *dir_path) {
     char *name = malloc(sizeof(char) * (strlen(dir_path) + strlen(basename(secretemessage_path) + 5)));
-    strcat(name, dir_path);
+    strcpy(name, dir_path);
     strcat(name, "/");
     strcat(name, basename(secretemessage_path));
     remove_ext(name);
