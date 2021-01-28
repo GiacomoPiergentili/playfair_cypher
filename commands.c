@@ -26,6 +26,7 @@ void process_command(int argc, char *argv[]) {
 }
 
 void encode(kf *keyfile, char *secretemessage_path, char *dir_path) {
+    check_dir(dir_path);
     char *name = gen_pf_path(secretemessage_path, dir_path);
     sm *message = create_message(secretemessage_path, keyfile);
     create_file(message, name);
@@ -34,6 +35,7 @@ void encode(kf *keyfile, char *secretemessage_path, char *dir_path) {
 }
 
 void decode(kf *keyfile, char *encodedmessage_path, char *dir_path) {
+    check_dir(dir_path);
     char *name = gen_dec_path(encodedmessage_path, dir_path);
     sm *message = create_encoded_message(encodedmessage_path, keyfile);
     create_decoded_file(message, name);

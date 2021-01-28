@@ -31,5 +31,6 @@ void free_alphabet(al *alphabet);
 void free_key(k *key);
 void free_keyfile(kf *keyfile);
 void check_keyfile(char *str);
+void check_alphabet(al *alphabet);
 
 #endif //PLAYFAIR_CYPHER_KEYFILE_READ_H

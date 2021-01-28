@@ -7,7 +7,7 @@
 
 char *read_message(char *secretemessage_path, char missing_alphabet_letter, char missing_char) {
     FILE *smp = fopen(secretemessage_path, "r");
-    check_exist(smp);
+    check_exist(smp, secretemessage_path);
     char *str = read_file(smp);
     str = remove_spaces(str);
     return remove_missing_alphabet_letter(str, missing_alphabet_letter, missing_char);

@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
+#include <memory.h>
 #include "utils.h"
 
 long find_size(FILE *fp) {
@@ -37,9 +38,14 @@ char *remove_spaces(char *str) {
     return out;
 }
 
-void check_exist(FILE *fp) {
+void check_exist(FILE *fp, char *message) {
     if (fp == NULL) {
-        printf("%s", "FILE NOT FOUND");
+        char *str = malloc(sizeof(char) * (strlen(message) + 10));
+        strcpy(str, message);
+        strcat(str, " ");
+        strcat(str, "NOT FOUND");
+        printf("%s", str);
+        free(str);
         exit(1);
     }
 }

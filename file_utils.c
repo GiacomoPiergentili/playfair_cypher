@@ -2,8 +2,9 @@
 #include <stdio.h>
 #include <string.h>
 #include <libgen.h>
+#include <dirent.h>
+#include <errno.h>
 #include "file_utils.h"
-#include "secretmessage_encode.h"
 
 char *get_message(sm *message) {
     char *smessage = malloc(sizeof(char) * (message->size + message->size/2) + 1);
@@ -68,4 +69,13 @@ void remove_ext(char *name) {
     if ((end > name && *end == '.') && (*(end - 1) != '\\' && *(end - 1) != '/')) {
         *end = '\0';
     }
+}
+
+void check_dir(char *dir_path) {
+    DIR* dir = opendir(dir_path);
+    if (ENOENT == errno) {
+        printf("DIRECTORY NOT FOUND");
+        exit(1);
+    }
+    closedir(dir);
 }

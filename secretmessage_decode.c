@@ -4,12 +4,11 @@
 #include "message_utils.h"
 #include "utils.h"
 #include "matrix_utils.h"
-#include "secretmessage_encode.h"
 #include "secretmessage_decode.h"
 
 char *read_encoded_message(char *encodedmessage_path) {
     FILE *smp = fopen(encodedmessage_path, "r");
-    check_exist(smp);
+    check_exist(smp, encodedmessage_path);
     char *str = read_file(smp);
     return (remove_spaces(str));
 }

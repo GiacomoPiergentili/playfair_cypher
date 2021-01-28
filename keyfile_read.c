@@ -7,11 +7,12 @@
 
 void read_all(char *keyfile_path, kf *keyfile) {
     FILE *kfp = fopen(keyfile_path, "r");
-    check_exist(kfp);
+    check_exist(kfp, keyfile_path);
     char *str = read_file(kfp);
     check_keyfile(str);
     char *token = strtok(str, "\r\n");
     keyfile->alphabet->alphabet = token;
+    check_alphabet(keyfile->alphabet);
     keyfile->alphabet->flag = malloc(25 * sizeof(int));
     token = strtok(NULL, "\r\n");
     keyfile->missing_char = token[0];
@@ -97,16 +98,34 @@ void free_keyfile(kf *keyfile) {
 };
 
 void check_keyfile(char *str) {
-    char *str1 = malloc(sizeof(char)*(strlen(str)+1));
+    char *str1 = malloc(sizeof(char) * (strlen(str) + 1));
     strcpy(str1, str);
     char *token = strtok(str1, "\r\n");;
     for (int i = 0; i < 4; i++) {
         if (token == NULL) {
-            printf("CAN'T GENERATE KEYFILE");
+            printf("THE KEYFILE MISSES ONE OR MORE ARGUMENTS");
+            exit(1);
+        }else if ((i == 1 || i == 2) && strlen(token) > 1) {
+            printf("MISSING OR SPECIAL LETTER SHOULD BE ONLY ONE CHARACTER");
             exit(1);
         } else {
             token = strtok(NULL, "\r\n");
         }
     }
     free(str1);
+}
+
+void check_alphabet(al *alphabet) {
+    if (strlen(alphabet->alphabet) > 25) {
+        printf("ALPHABET SHOULD BE LESS THAN 25 CHARACTERS");
+        exit(1);
+    }
+    for (int i = 0; i < strlen(alphabet->alphabet); i++) {
+        for (int j = i + 1; j < strlen(alphabet->alphabet); j++) {
+            if (alphabet->alphabet[i] == alphabet->alphabet[j]) {
+                printf("ALPHABET CONTAINS 2 TIMES OR MORE THE SAME LETTER");
+                exit(1);
+            }
+        }
+    }
 }
