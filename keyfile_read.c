@@ -116,7 +116,7 @@ void check_keyfile(char *str) {
 }
 
 void check_alphabet(al *alphabet) {
-    if (strlen(alphabet->alphabet) > 25) {
+    if (strlen(alphabet->alphabet) != 25 ) {
         printf("ALPHABET SHOULD BE LESS THAN 25 CHARACTERS");
         exit(1);
     }
