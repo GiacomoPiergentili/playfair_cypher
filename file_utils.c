@@ -8,6 +8,7 @@
 
 char *get_message(sm *message) {
     char *smessage = malloc(sizeof(char) * (message->size + message->size/2) + 1);
+    strcpy(smessage,"");
     for (int i = 0; i < message -> size / 2; i++) {
         strcat(smessage, message -> encoded_pairs[i]);
         strcat(smessage, " ");
@@ -17,6 +18,7 @@ char *get_message(sm *message) {
 
 char *get_decoded_message(sm *message) {
     char *smessage = malloc(sizeof(char) * (message->size + message->size/2) + 1);
+    strcpy(smessage,"");
     for (int i = 0; i < message -> size / 2; i++) {
         strcat(smessage, message -> pairs[i]);
     }
